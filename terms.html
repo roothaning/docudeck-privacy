@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuDeck - Terms of Use (EULA)</title>
+    <meta name="description" content="Official Terms of Use and End User License Agreement (EULA) for DocuDeck iOS Application.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --border: #e2e8f0;
+            --header-bg: rgba(255, 255, 255, 0.85);
+            --badge-bg: #dbeafe;
+            --badge-text: #1e40af;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b0f19;
+                --card-bg: #151b2b;
+                --text-primary: #f1f5f9;
+                --text-secondary: #94a3b8;
+                --accent: #3b82f6;
+                --accent-light: #1e293b;
+                --border: #222d42;
+                --header-bg: rgba(21, 27, 43, 0.85);
+                --badge-bg: #1e293b;
+                --badge-text: #93c5fd;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.15s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 40px auto 80px;
+            padding: 0 24px;
+        }
+
+        .hero {
+            margin-bottom: 36px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 24px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">D</div>
+                <span>DocuDeck</span>
+            </a>
+            <nav>
+                <a href="index.html">Privacy Policy</a>
+                <a href="terms.html" class="active">Terms of Use (EULA)</a>
+                <a href="support.html">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="badge">Legal Terms & License</div>
+            <h1>Terms of Use (EULA)</h1>
+            <p class="last-updated">Last Updated: November 7, 2026</p>
+        </div>
+
+        <div class="content-card">
+            <section>
+                <h2>1. Acceptance of Terms</h2>
+                <p>By downloading, installing, or using <strong>DocuDeck</strong> ("the App"), you agree to be bound by these Terms of Use and the standard Apple End User License Agreement (EULA). If you do not agree to these terms, do not download or use the application.</p>
+            </section>
+
+            <section>
+                <h2>2. License Grant & Permitted Use</h2>
+                <p>We grant you a revocable, non-exclusive, non-transferable, limited license to download, install, and use the App on iOS and iPadOS devices owned or controlled by you in accordance with the Apple App Store Terms of Service.</p>
+            </section>
+
+            <section>
+                <h2>3. In-App Purchases & Subscriptions</h2>
+                <p>DocuDeck offers optional auto-renewable subscriptions (Monthly, Yearly with a 7-day free trial) and Lifetime purchases to access premium productivity tools:</p>
+                <ul>
+                    <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+                    <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing cycle.</li>
+                    <li>You can manage or cancel your subscription at any time in your Apple ID Account Settings.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. User Responsibilities & Content Ownership</h2>
+                <p>You retain 100% ownership and legal responsibility for all files, documents, images, and content you import, create, edit, or sign using the App. DocuDeck does not monitor, inspect, or store your documents.</p>
+            </section>
+
+            <section>
+                <h2>5. Digital Signature Disclaimer</h2>
+                <p>The signature tools provided in DocuDeck allow embedding graphical and vector ink signatures onto documents. This tool is designed for everyday agreements and does not automatically replace specialized cryptographic digital signatures mandated by specific statutory regulations.</p>
+            </section>
+
+            <section>
+                <h2>6. Disclaimer of Warranties & Limitation of Liability</h2>
+                <p>DocuDeck is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. To the maximum extent permitted by applicable law, we disclaim all warranties, express or implied, and shall not be liable for any indirect, incidental, or consequential damages.</p>
+            </section>
+
+            <section>
+                <h2>7. Contact</h2>
+                <p>For legal inquiries, contact <a href="mailto:support@docudeck.app" style="color: var(--accent); text-decoration: none;">support@docudeck.app</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DocuDeck. All rights reserved. • <a href="index.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a> • <a href="support.html">Support</a></p>
+    </footer>
+
+</body>
+</html>

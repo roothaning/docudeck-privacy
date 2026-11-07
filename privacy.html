@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuDeck - Privacy Policy</title>
+    <meta name="description" content="Official Privacy Policy for DocuDeck iOS Application. Zero data collection, 100% on-device processing.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --border: #e2e8f0;
+            --header-bg: rgba(255, 255, 255, 0.85);
+            --badge-bg: #dbeafe;
+            --badge-text: #1e40af;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b0f19;
+                --card-bg: #151b2b;
+                --text-primary: #f1f5f9;
+                --text-secondary: #94a3b8;
+                --accent: #3b82f6;
+                --accent-light: #1e293b;
+                --border: #222d42;
+                --header-bg: rgba(21, 27, 43, 0.85);
+                --badge-bg: #1e293b;
+                --badge-text: #93c5fd;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.15s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 40px auto 80px;
+            padding: 0 24px;
+        }
+
+        .hero {
+            margin-bottom: 36px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 24px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">D</div>
+                <span>DocuDeck</span>
+            </a>
+            <nav>
+                <a href="index.html" class="active">Privacy Policy</a>
+                <a href="terms.html">Terms of Use (EULA)</a>
+                <a href="support.html">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="badge">Legal & Security</div>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: November 7, 2026 • Effective Date: November 7, 2026</p>
+        </div>
+
+        <div class="content-card">
+            <section>
+                <h2>1. Core Privacy Principle (Privacy-by-Design)</h2>
+                <p>Welcome to <strong>DocuDeck</strong> ("we", "our", or "the App"). We believe your documents, files, and personal data belong exclusively to you. DocuDeck is engineered with a strict <em>privacy-by-design</em> architecture.</p>
+                <div class="highlight-box">
+                    <p>DocuDeck operates 100% locally on your iOS device. Your documents, notes, spreadsheets, and presentations are never uploaded to any remote server or third-party cloud.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Zero-Server On-Device Processing</h2>
+                <p>All core functionalities and document operations execute natively on your device utilizing Apple's official system frameworks (PDFKit, QuickLook, CoreGraphics, Vision OCR, and local file storage):</p>
+                <ul>
+                    <li><strong>Document Viewing & Editing:</strong> Viewing and editing Word (.docx), Excel (.xlsx, .csv), PowerPoint (.pptx), text (.txt), and PDF documents is computed locally.</li>
+                    <li><strong>PDF Tools:</strong> Merging, splitting, compressing, password protection, and watermarking occur in-memory on your iPhone.</li>
+                    <li><strong>Digital Signature:</strong> Ink and vector signatures are created and stamped onto PDFs directly on-device.</li>
+                    <li><strong>Document Scanner & OCR:</strong> Optical Character Recognition (OCR) is performed entirely on-device via Apple's Vision framework without sending camera frames to remote servers.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Information We Collect (Zero Tracking)</h2>
+                <p>We do <strong>not</strong> collect, track, log, or sell any personal data:</p>
+                <ul>
+                    <li>No personal account registration is required to use DocuDeck.</li>
+                    <li>We do not collect names, email addresses, phone numbers, or IP addresses.</li>
+                    <li>We do not track your location or analyze the content of your documents.</li>
+                    <li>We do not bundle third-party advertising SDKs, tracking cookies, or commercial telemetry brokers.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Device Permissions & Purpose</h2>
+                <p>DocuDeck requests only the system permissions necessary to provide features you explicitly initiate:</p>
+                <ul>
+                    <li><strong>Camera:</strong> Used solely when you choose to scan physical documents into a digital PDF. No footage is stored or transmitted outside your device.</li>
+                    <li><strong>Photo Library:</strong> Accessed through Apple's privacy-preserving PhotosPicker only when you select images to convert into a PDF.</li>
+                    <li><strong>Face ID / Touch ID:</strong> Used exclusively to unlock your local on-device Secure Vault. Biometric authentication is handled entirely by Apple's Secure Enclave hardware and is never accessible to the app.</li>
+                    <li><strong>Files & Storage:</strong> Used strictly to read and save documents within the app's local sandbox or your designated personal iCloud Drive directory.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. In-App Purchases & Subscriptions</h2>
+                <p>Subscriptions and lifetime unlocks are processed exclusively through <strong>Apple StoreKit</strong>. We do not receive, process, or store your credit card or financial information. All billing, renewals, and cancellations are governed by Apple's standard App Store Terms and Conditions.</p>
+            </section>
+
+            <section>
+                <h2>6. Data Retention & Deletion</h2>
+                <p>Because all data resides strictly on your local device:</p>
+                <ul>
+                    <li>You maintain total control over your files. Deleting a document within the app or removing the app permanently deletes all associated local files.</li>
+                    <li>Files stored in your personal iCloud Drive remain under your direct control via your Apple ID.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>7. Children's Privacy (COPPA & GDPR)</h2>
+                <p>DocuDeck does not collect any personal information from anyone, including children under the age of 13 (or under 16 in the European Union). The app complies fully with the Children's Online Privacy Protection Act (COPPA) and the General Data Protection Regulation (GDPR).</p>
+            </section>
+
+            <section>
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of DocuDeck constitutes acceptance of the current policy.</p>
+            </section>
+
+            <section>
+                <h2>9. Contact & Support</h2>
+                <p>If you have any questions or feedback regarding this Privacy Policy, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:support@docudeck.app" style="color: var(--accent); text-decoration: none;">support@docudeck.app</a></li>
+                    <li><strong>GitHub Repository:</strong> <a href="https://github.com/roothaning/DocuKit-iOS" target="_blank" style="color: var(--accent); text-decoration: none;">github.com/roothaning/DocuKit-iOS</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DocuDeck. All rights reserved. • <a href="index.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a> • <a href="support.html">Support</a></p>
+    </footer>
+
+</body>
+</html>

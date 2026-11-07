@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuDeck - Support & Help Center</title>
+    <meta name="description" content="Support and Help Center for DocuDeck iOS Application.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --border: #e2e8f0;
+            --header-bg: rgba(255, 255, 255, 0.85);
+            --badge-bg: #dbeafe;
+            --badge-text: #1e40af;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b0f19;
+                --card-bg: #151b2b;
+                --text-primary: #f1f5f9;
+                --text-secondary: #94a3b8;
+                --accent: #3b82f6;
+                --accent-light: #1e293b;
+                --border: #222d42;
+                --header-bg: rgba(21, 27, 43, 0.85);
+                --badge-bg: #1e293b;
+                --badge-text: #93c5fd;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.15s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 40px auto 80px;
+            padding: 0 24px;
+        }
+
+        .hero {
+            margin-bottom: 36px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .faq-item {
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .contact-box {
+            background: var(--accent-light);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 36px;
+        }
+
+        .contact-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: opacity 0.15s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">D</div>
+                <span>DocuDeck</span>
+            </a>
+            <nav>
+                <a href="index.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use (EULA)</a>
+                <a href="support.html" class="active">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="badge">Help & Assistance</div>
+            <h1>DocuDeck Support</h1>
+            <p style="color: var(--text-secondary);">We are here to help you get the most out of DocuDeck on your iPhone and iPad.</p>
+        </div>
+
+        <div class="content-card">
+            <div class="faq-item">
+                <h2>How does DocuDeck handle my document privacy?</h2>
+                <p>DocuDeck is built with zero-server on-device processing. All file edits (Word, Excel, PowerPoint, PDF, Text) and OCR scanning occur 100% on your device. We do not store or transmit your documents.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>How do I restore my purchases?</h2>
+                <p>Open DocuDeck, go to <strong>Settings</strong> > <strong>Restore Purchases</strong>. Apple will securely verify your Apple ID purchases and reactivate your subscription or lifetime access.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>How do I cancel my subscription?</h2>
+                <p>Subscriptions can be managed directly on your device: Open iOS <strong>Settings</strong> > tap your <strong>Apple ID</strong> name at the top > tap <strong>Subscriptions</strong> > select <strong>DocuDeck</strong> > tap <strong>Cancel Subscription</strong>.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Which file formats can I open and edit?</h2>
+                <p>DocuDeck natively supports viewing and editing Microsoft Word (.docx, .doc), Excel (.xlsx, .xls, .csv), PowerPoint (.pptx, .ppt), plain text (.txt, .md), RTF, and PDF documents.</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Still need assistance?</h3>
+                <p>Send an email to our support engineering team and we will get back to you within 24 hours.</p>
+                <a href="mailto:support@docudeck.app" class="btn">Email Support</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DocuDeck. All rights reserved. • <a href="index.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a> • <a href="support.html">Support</a></p>
+    </footer>
+
+</body>
+</html>
